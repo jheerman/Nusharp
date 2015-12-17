@@ -34,7 +34,6 @@ namespace Nusharp.Core
 
 		internal dynamic UpdatePackages(dynamic request)
 		{
-
 			var feed = BuildFeed();
 			var packageRequest = PackageRequest.FromRequest(Request);
 			
