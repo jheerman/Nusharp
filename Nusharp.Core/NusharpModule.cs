@@ -115,10 +115,11 @@ namespace Nusharp.Core
 		private IEnumerable<Package> Packages()
 		{
 			IList<Package> packages = new List<Package>();
-			foreach (var packagePath in Directory.GetFiles(Config.PackageRepositoryPath, "*.nupkg").OrderByDescending(x => x))
-			{
+			foreach(var directory in Directory.GetDirectories(Config.PackageRepositoryPath))
+			    foreach (var packagePath in Directory.GetFiles(directory, "*.nupkg").OrderByDescending(x => x))
+			    {
 				packages.Add(Package.FromNupkg(packagePath));
-			}
+			    }
 
 			foreach (var package in packages)
 			{
