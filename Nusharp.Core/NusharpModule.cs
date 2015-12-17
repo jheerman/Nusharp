@@ -14,6 +14,7 @@ namespace Nusharp.Core
 	{ 
 		public NusharpModule()
 		{
+			StaticConfiguration.DisableErrorTraces = false;
 			if(!string.IsNullOrWhiteSpace(Config.Username))
 				this.RequiresAuthentication();
 

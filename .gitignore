@@ -46,6 +46,7 @@ build/
 *.pidb
 *.log
 *.scc
+*.swp
 
 # ReSharper is a .NET coding add-in
 _ReSharper*/
